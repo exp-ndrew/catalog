@@ -8,6 +8,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'bootstrap-sass'
 
 group :development do
   gem 'better_errors'
