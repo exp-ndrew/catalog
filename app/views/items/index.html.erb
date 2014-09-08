@@ -3,7 +3,7 @@
 
 <h2>Items</h2>
   <ul>
-    <% @items.each do |item| %>
+    <% @items.sort.each do |item| %>
       <li><%= link_to "#{item.name}", "/items/#{item.id}" %></li>
     <% end %>
   </ul>
