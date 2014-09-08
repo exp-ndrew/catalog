@@ -7,6 +7,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'paperclip', github: 'thoughtbot/paperclip'
 
 group :development do
   gem 'better_errors'
