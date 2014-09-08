@@ -7,6 +7,10 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
+  def show
+    @item = Item.find(params[:id])
+  end
+
   def create
     @item = Item.create(item_params)
     if @item.save
@@ -14,6 +18,23 @@ class ItemsController < ApplicationController
       redirect_to items_path
     else
       render new_item_path
+    end
+  end
+
+  def edit
+    @item = Item.find(params[:id])
+    @name = @item.name
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    @name = @item.name
+    @item.update(item_params)
+    if @item.save
+      flash[:notice] = "#{@item.name} updated."
+      redirect_to item_path(@item)
+    else
+      render 'edit'
     end
   end
 
