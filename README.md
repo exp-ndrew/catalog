@@ -1,0 +1,23 @@
+# Catalog
+
+## About
+
+An app for keeping track of photos and items.
+
+## Setup
+
+1. Clone the repository using `$ git clone`
+1. Run `$ rake db:create`, `$ rake db:migrate`, and `$ rake db:seed` from the directory you cloned into
+1. Run `$ rails server`
+1. Go to [http://localhost:3000/](http://localhost:3000/) in a web browser to use the program.
+
+## Meta
+
+8 September 2014
+
+
+[Matt Waechter](http://github.com/mttwchtr) and [Andrew M Westling](http://github.com/expandrew)
+via [Epicodus](http://www.learnhowtoprogram.com/lessons/photo-sharing-app)
+
+## License
+MIT
