@@ -1,0 +1,9 @@
+<h2>New Item</h2>
+
+<div id="errors">
+    <%= render('/layouts/errors.html', :object => @item) %>
+</div>
+
+<%= render "form" %>
+
+<%= link_to "Go Back", items_path, :class => "btn btn-default" %>
