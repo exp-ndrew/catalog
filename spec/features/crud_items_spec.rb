@@ -38,4 +38,14 @@ describe "editing an item" do
   end
 end
 
+describe "deleting an item" do
+  it "allows items to be deleted" do
+    Item.create({:name => 'A Wild Capybara Tester'})
+    visit '/'
+    click_on 'A Wild Capybara Tester'
+    click_on 'Delete'
+    page.should have_content 'deleted'
+  end
+end
+
 
