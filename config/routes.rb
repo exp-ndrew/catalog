@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'items#index'
-  resources :items
-  resources :photos
+  resources :items do
+    resources :photos
+  end
 end

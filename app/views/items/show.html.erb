@@ -1,4 +1,5 @@
 <h2><%= @item.name %></h2>
+<%= link_to "Add Photo", new_item_photo_path(@item), :class => "btn btn-default" %>
 
 <%= link_to "Edit", edit_item_path, :class => "btn btn-info" %>
 
