@@ -6,7 +6,11 @@
 
 <h2><%= @item.name %></h2>
 
-<a href="#" data-toggle="modal" data-target=".add-photo-modal" class="btn btn-default">Add Photo</a>
+<% @item.photos.each do |photo| %>
+    <p><%= image_tag photo.item_image.url %></p>
+<% end %>
+
+<%= link_to "Add Photo", new_item_photo_path(@item), :class => "btn btn-default" %>
 
 <%= link_to "Edit", edit_item_path, :class => "btn btn-info" %>
 
