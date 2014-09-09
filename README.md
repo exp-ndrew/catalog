@@ -2,7 +2,7 @@
 
 ## About
 
-An app for keeping track of photos and items.
+An app for keeping track of photos and items. Completed primarily to learn about using the [Paperclip](https://github.com/thoughtbot/paperclip) gem to upload assets within a Rails app.
 
 ## Setup
 
@@ -13,7 +13,7 @@ An app for keeping track of photos and items.
 
 ## Meta
 
-8 September 2014
+8..9 September 2014
 
 
 [Matt Waechter](http://github.com/mttwchtr) and [Andrew M Westling](http://github.com/expandrew)
