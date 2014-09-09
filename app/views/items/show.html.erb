@@ -5,9 +5,9 @@
 </div>
 
 <h2><%= @item.name %></h2>
-
 <% @item.photos.each do |photo| %>
-    <p><%= image_tag photo.item_image.url %></p>
+<div>
+    <p><%= image_tag photo.item_image.url(:medium) %><%= link_to "Delete", item_photo_path(@item, photo), :data => {:confirm => "Are you sure you want to delete this photo?", :method => "delete"}, :class => "btn btn-danger btn-xs" %></p>
 <% end %>
 
 <%= link_to "Add Photo", new_item_photo_path(@item), :class => "btn btn-default" %>
