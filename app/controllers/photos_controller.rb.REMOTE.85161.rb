@@ -16,6 +16,10 @@ class PhotosController < ApplicationController
   end
 
   private
+
+  # Use strong_parameters for attribute whitelisting
+  # Be sure to update your create() and update() controller methods.
+
   def photo_params
     params.require(:photo).permit(:item_image, :item_id)
   end

@@ -1,0 +1,10 @@
+<h1>Add a Photo</h1>
+
+<div id="errors">
+  <%= render '/layouts/errors', :object => @photo %>
+</div>
+
+<%= form_for [@item, @photo], :html => { :multipart => true } do |form| %>
+  <%= form.file_field :item_image %>
+  <%= form.submit :class => "btn btn-primary" %>
+<% end %>
