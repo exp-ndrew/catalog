@@ -9,7 +9,7 @@ An app for keeping track of photos and items. Completed primarily to learn about
 1. Clone the repository using `$ git clone`
 1. Run `$ rake db:create`, `$ rake db:migrate`, and `$ rake db:seed` from the directory you cloned into
 1. Run `$ rails server`
-1. Go to [http://localhost:3000/](http://localhost:3000/) in a web browser to use the program.
+1. Go to [http://localhost:3000/](http://localhost:3000/) in a web browser to use the program — Click the Log In button at the top right and use the default login `hi@aol.com` with password `go`. You can create a new user with the "Sign Up" link at the top right.
 
 ## Meta
 
