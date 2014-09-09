@@ -10,6 +10,12 @@
   <div id="notice" style="background: green; color: white; text-align:center;">
     <%= flash[:notice] %>
   </div>
+  <div id="alert" style="background: red; color: white; text-align:center;">
+    <%= flash[:alert] %>
+  </div>
+  <div id="login-signup" style="text-align: right;">
+    <%= render 'layouts/login_signup' %>
+  </div>
   <div class="container">
     <div class="col-md-4"></div>
     <div class="col-md-4">

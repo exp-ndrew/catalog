@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'bootstrap-sass'
+gem 'bcrypt-ruby'
 
 group :development do
   gem 'better_errors'

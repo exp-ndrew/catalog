@@ -1,0 +1,9 @@
+<h2>Sign Up</h2>
+
+<div id="errors">
+  <%= render '/layouts/errors', :object => @user %>
+</div>
+
+<%= render 'signup_form', :object => @user %>
+<br>
+<%= link_to "Go Back", root_path, :class => "btn btn-default" %>
