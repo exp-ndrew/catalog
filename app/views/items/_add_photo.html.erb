@@ -6,11 +6,11 @@
         <h4 class="modal-title">Add a Photo</h4>
       </div>
       <div class="modal-body">
-        <%= form_for @photo, :url => item_photos_path(@item), :html => { :multipart => true } do |form| %>
-          <%= form.file_field :image %>
+        <%= form_for [@item, @photo], :html => { :multipart => true } do |form| %>
+          <%= form.file_field :item_image %>
       </div>
       <div class="modal-footer">
-        <%= form.submit "Add Image", :class => "btn btn-default" %>
+        <%= form.submit :class => "btn btn-default" %>
       </div>
         <% end %>
     </div>

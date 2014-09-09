@@ -8,8 +8,8 @@ class PhotosController < ApplicationController
     @item = Item.find(params[:item_id])
     @photo = @item.photos.new(photo_params)
     if @photo.save
-      flash[:notice] = "Photo added"
-      redirect_to items_path
+      flash[:notice] = "Photo added."
+      redirect_to item_path(@item)
     else
       render 'new'
     end
