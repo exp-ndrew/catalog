@@ -7,16 +7,16 @@
 <h2><%= @item.name %></h2>
 <% @item.photos.each do |photo| %>
 <div>
-    <p><%= image_tag photo.item_image.url(:medium) %><%= link_to "Delete", item_photo_path(@item, photo), :data => {:confirm => "Are you sure you want to delete this photo?", :method => "delete"}, :class => "btn btn-danger btn-xs" %></p>
+    <p><%= image_tag photo.item_image.url(:medium) %><% if current_user %><%= link_to "Delete", item_photo_path(@item, photo), :data => {:confirm => "Are you sure you want to delete this photo?", :method => "delete"}, :class => "btn btn-danger btn-xs" %><% end %></p>
 <% end %>
+<% if current_user %>
+  <%= link_to "Add Photo", new_item_photo_path(@item), :class => "btn btn-default" %>
 
-<%= link_to "Add Photo", new_item_photo_path(@item), :class => "btn btn-default" %>
+  <%= link_to "Edit", edit_item_path, :class => "btn btn-info" %>
 
-<%= link_to "Edit", edit_item_path, :class => "btn btn-info" %>
-
-<%= link_to "Delete", item_path(@item),
-                         :data => {:confirm => "Are you sure you want to delete #{@item.name}?",
-                                   :method => "delete"},
-                         :class => "btn btn-danger" %>
-
+  <%= link_to "Delete", item_path(@item),
+                           :data => {:confirm => "Are you sure you want to delete #{@item.name}?",
+                                     :method => "delete"},
+                           :class => "btn btn-danger" %>
+<% end %>
 <%= link_to "Go Back", items_path, :class => "btn btn-default" %>
